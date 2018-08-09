@@ -1,9 +1,11 @@
+@import '/partials/_variables';
+@import '/partials/_form';
+@import '/partials/_nav';
+
 * {
   font-family: 'Rubik', sans-serif;
 }
-body {
-  margin: 0 50px;
-}
 
-@import '/partials/_variables';
-@import '/partials/_nav';
+body {
+  margin: 0 50px !important;
+}
