@@ -1,8 +1,15 @@
 import React from 'react';
+import Nav from '../components/nav';
+import AddTool from '../components/AddTool';
 import '../styles/global.scss';
 
 export default class Main extends React.Component {
   render() {
-    return <h1>David Castro</h1>;
+    return (
+      <div>
+        <Nav />
+        <AddTool />
+      </div>
+    );
   }
 }

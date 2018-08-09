@@ -1,0 +1,28 @@
+.nav-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.nav-left {
+  flex: 2;
+  h1 {
+    font-size: 30px;
+    color: $main-green;
+  }
+}
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  h1 {
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  h1:first-child {
+    padding-right: 20px;
+  }
+}
