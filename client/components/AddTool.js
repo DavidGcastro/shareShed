@@ -11,16 +11,21 @@ export default class AddTool extends Component {
       price: '',
       image: ''
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleForm = this.handleForm.bind(this);
   }
 
-  handleChange(event) {
+  handleSubmit(event) {
     console.log(event);
+  }
+  handleForm(event) {
+    let value = event.target.value;
+    this.setState({ [event.target.name]: value });
   }
 
   render() {
     return (
-      <Form className="form" onChange={this.handleChange(event)}>
+      <Form className="form" onChange={this.handleForm}>
         <FormGroup>
           <Label for="name">Name</Label>
           <Input type="text" name="name" placeholder="Enter Product Name" />
@@ -48,7 +53,7 @@ export default class AddTool extends Component {
           <Label for="image">Image</Label>
           <Input type="text" name="image" placeholder="Enter Product image" />
         </FormGroup>
-        <Button>Submit</Button>
+        <Button onClick={this.handleSubmit}>Submit</Button>
       </Form>
     );
   }
