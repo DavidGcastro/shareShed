@@ -1,6 +1,7 @@
 const router = require('express').Router();
-router.get('/', (req, res, next) => {
-  res.send('Hello world');
+
+router.get('/users', (req, res, next) => {
+  router.use('/tools', require('./tools'));
   next();
 });
 
